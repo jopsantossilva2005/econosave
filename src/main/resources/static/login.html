@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Entrar · EconoSave</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="auth.js"></script>
+</head>
+<body class="auth">
+<main class="auth-card" style="margin:0">
+    <a class="auth-brand" href="login.html">EconoSave</a>
+    <p class="eyebrow">SEU DINHEIRO, NO SEU CONTROLE</p>
+    <h1>Bom ter você aqui.</h1>
+    <p>Entre para acompanhar suas finanças.</p>
+    <p id="sucesso" role="status"></p>
+    <form data-action="login">
+        <label for="email">E-mail<input name="email" id="email" type="email" required maxlength="254" autocomplete="username"></label>
+        <label for="senha">Senha<input name="senha" id="senha" type="password" required maxlength="72" autocomplete="current-password"></label>
+        <div id="mensagem" role="alert"></div>
+        <button class="primary">Entrar na minha conta</button>
+    </form>
+    <p class="switch">Ainda não tem conta? <a href="cadastro.html">Criar conta</a></p>
+</main>
+</body>
+</html>

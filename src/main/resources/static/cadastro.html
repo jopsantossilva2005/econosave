@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Criar conta · EconoSave</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="auth.js"></script>
+</head>
+<body class="auth">
+<main class="auth-card" style="margin:0">
+    <a class="auth-brand" href="login.html">♧ EconoSave</a>
+    <p class="eyebrow">COMECE COM UM PEQUENO PASSO</p>
+    <h1>Seu futuro começa aqui.</h1>
+    <p>Crie sua conta para organizar receitas e despesas.</p>
+    <p id="sucesso" role="status"></p>
+    <form data-action="register">
+        <label for="nome">Nome<input name="nome" id="nome" required maxlength="100" autocomplete="name"></label>
+        <label for="email">E-mail<input name="email" id="email" type="email" required maxlength="254" autocomplete="email"></label>
+        <label for="senha">Senha<input name="senha" id="senha" type="password" required minlength="8" maxlength="72" autocomplete="new-password" aria-describedby="senha-ajuda"></label>
+        <small id="senha-ajuda">Use entre 8 e 72 caracteres.</small>
+        <div id="mensagem" role="alert"></div>
+        <button class="primary">Criar minha conta</button>
+    </form>
+    <p class="switch">Já tem uma conta? <a href="login.html">Entrar</a></p>
+</main>
+</body>
+</html>
