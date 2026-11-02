@@ -23,6 +23,7 @@ public class Usuario {
     private String email;
 
     @NotBlank(message = "A senha é obrigatória")
+    @JsonIgnore
     private String senha;
 
     @JsonIgnore
