@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: econosave
+    runtime: docker
+    region: virginia
+    plan: free
+    healthCheckPath: /login.html
+    envVars:
+      - key: DB_URL
+        value: jdbc:postgresql://${PGHOST}:5432/econosave
+      - key: PGHOST
+        fromDatabase:
+          name: econosave-db
+          property: host
+      - key: DB_USER
+        fromDatabase:
+          name: econosave-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: econosave-db
+          property: password
+
+databases:
+  - name: econosave-db
+    databaseName: econosave
+    region: virginia
+    plan: free
+    postgresMajorVersion: "16"
+    ipAllowList: []
